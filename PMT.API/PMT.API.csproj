@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="DBChanges\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PMT.Core\PMT.Core.csproj" />
+    <ProjectReference Include="..\PMT.Infrastructure\PMT.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
