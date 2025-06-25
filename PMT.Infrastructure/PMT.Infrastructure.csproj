@@ -17,8 +17,4 @@
     <ProjectReference Include="..\PMT.Core\PMT.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

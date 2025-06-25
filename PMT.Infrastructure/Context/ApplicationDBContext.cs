@@ -3,7 +3,7 @@ using PMT.Core.Entities;
 
 namespace PMT.Infrastructure.Context;
 
-public class ApplicationDBContext : DbContext
+public class ApplicationDbContext : DbContext
 {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
