@@ -105,4 +105,18 @@ public class OrganizationsService(IOrganizationsRepository _organizationsReposit
 
         return _mapper.Map<OrganizationResponse>(organization);
     }
+
+    public async Task<List<OrganizationResponse>> GetAllOrganizationsAsync()
+    {
+        List<Organization> organizations = await _organizationsRepository.GetAllOrganizationsAsync();
+
+        List<OrganizationResponse> organizationResponses = new List<OrganizationResponse>();
+
+        foreach(Organization organization in organizations)
+        {
+            organizationResponses.Add(_mapper.Map<OrganizationResponse>(organization));
+        }
+
+        return organizationResponses;
+    }
 }

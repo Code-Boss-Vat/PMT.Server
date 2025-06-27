@@ -100,4 +100,9 @@ public class OrganizationsRepository(ApplicationDbContext _dbContext) : IOrganiz
 
         return organization;
     }
+
+    public async Task<List<Organization>> GetAllOrganizationsAsync()
+    {
+        return await _dbContext.Organizations.ToListAsync() ?? new List<Organization>();
+    }
 }

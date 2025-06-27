@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PMT.Core.Entities;
 
-[Table("Tasks", Schema = "public")]
+[Table("ProjectTasks", Schema = "public")]
 public class ProjectTask : EntityBase
 {
     public Guid Id { get; set; }

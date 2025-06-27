@@ -6,7 +6,9 @@ using PMT.Core.Services;
 
 namespace PMT.API.Controllers
 {
-    public class AccountsController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AccountsController : ControllerBase
     {
         private readonly IUsersService _usersService;
         private readonly JwtService _jwtService;
@@ -18,6 +20,7 @@ namespace PMT.API.Controllers
         }
 
         [HttpPost]
+        [Route("[action]")]
         public async Task<IActionResult> SignIn(SignInRequest model)
         {
             if (!ModelState.IsValid)
@@ -46,7 +49,8 @@ namespace PMT.API.Controllers
             });
         }
 
-        [HttpPost("register")]
+        [HttpPost]
+        [Route("[action]")]
         public async Task<IActionResult> Register(SignupRequest model)
         {
             if (!ModelState.IsValid)

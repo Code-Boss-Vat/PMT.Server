@@ -34,13 +34,6 @@ var app = builder.Build();
 //Enable routing
 app.UseRouting();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "api/{controller}/{action}/{id?}");
-});
-
 app.UseSwagger(); //Adds endpoints that can serve the swagger.json
 app.UseSwaggerUI(); //Adds swagger UI (interactive page to explore and test API endpoints)
 app.UseCors();
