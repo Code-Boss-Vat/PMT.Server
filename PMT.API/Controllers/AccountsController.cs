@@ -51,7 +51,7 @@ namespace PMT.API.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> Register(SignupRequest model)
+        public async Task<IActionResult> Signup(SignupRequest model)
         {
             if (!ModelState.IsValid)
             {
